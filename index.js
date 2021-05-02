@@ -9,7 +9,6 @@ const {CartRouter} = require('./routers/cart-router')
 const {dbConnection} = require('./db/dbConnection')
 
 // initiate db dbConnection
-// just adding a commnet to see if something changes
 dbConnection();
 
 app.get('/' , (req , res) =>{
