@@ -5,6 +5,10 @@ app.use(cors())
 const {ProductsRouter} = require('./routers/products-router')
 const {WishlistRouter} = require('./routers/wishlist-router')
 const {CartRouter} = require('./routers/cart-router')
+<<<<<<< HEAD
+=======
+
+>>>>>>> parent of 3670743 (update : removed whole code)
 const {dbConnection} = require('./db/dbConnection')
 
 // initiate db dbConnection
