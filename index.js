@@ -7,6 +7,10 @@ const {WishlistRouter} = require('./routers/wishlist-router')
 const {CartRouter} = require('./routers/cart-router')
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> parent of 3670743 (update : removed whole code)
 =======
 
 >>>>>>> parent of 3670743 (update : removed whole code)
