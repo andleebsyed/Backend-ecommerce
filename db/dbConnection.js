@@ -1,7 +1,9 @@
 const mongoose = require('mongoose')
 
 function dbConnection(){
-mongoose.connect('mongodb+srv://andleebsyed:andydev%40123@neog-cluster.4e6nl.mongodb.net/inventory' ,  {
+  const URL = process.env['URI']
+  console.log("url ")
+mongoose.connect(URL ,  {
     useUnifiedTopology: true,
     useNewUrlParser: true,
   })
