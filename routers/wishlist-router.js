@@ -1,13 +1,6 @@
 const express = require('express')
-var bodyParser = require('body-parser');
 const WishlistRouter = express.Router();
 const {Wishlist} = require('../models/wishlist-model')
-// to parse the data coming from body as JSON we need to use body-parser
-
-const cors = require('cors')
-WishlistRouter.use(cors())
-// Middleware to make the data as JSON
-WishlistRouter.use(bodyParser.json({limit: '5000kb'}));
 
 WishlistRouter.route('/')
 .get(async (req,  res) =>{

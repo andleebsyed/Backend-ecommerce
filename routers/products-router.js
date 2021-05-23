@@ -1,13 +1,7 @@
 const express = require('express')
-var bodyParser = require('body-parser');
 const ProductsRouter = express.Router();
-const cors = require('cors')
-ProductsRouter.use(cors())
 const {Products} = require('../models/products-model')
-// to parse the data coming from body as JSON we need to use body-parser
-ProductsRouter.use(cors())
-// Middleware to make the data as JSON
-// ProductsRouter.use(bodyParser.json());
+
 
 ProductsRouter.route('/')
 .get(async (req,  res) =>{

@@ -1,10 +1,6 @@
 const express = require('express')
-const bodyParser = require('body-parser')
 const {Cart} = require('../models/cart-model')
 const CartRouter   = express.Router()
-CartRouter.use(bodyParser.json({limit: '5000kb'}))
-const cors = require('cors')
-CartRouter.use(cors())
 CartRouter.route('/')
 .get(async (req , res) =>{
   try{
@@ -51,7 +47,7 @@ const paramCase = req.param('case')
 catch(error){
   res.json({message : "failed" , errMessage :error.message})
 }
-  }  //if close
+  } 
 
   //for decrement
   else{
@@ -81,7 +77,6 @@ catch(error){
 CartRouter.route('/:id')
 .delete(async (req, res) =>{
   const {id} = req.params
-  console.log(id)
   try{
       await Cart.remove({_id : id})
       res.json({staus : true , message : 'deleted successfully'})
